@@ -14,9 +14,7 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
 / {
-    chosen {
-        zmk,physical-layout = &default_layout;
-    };
+    chosen { zmk,physical-layout = &default_layout; };
 };
 
 / {
@@ -47,6 +45,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_DELETE";
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
@@ -160,100 +159,100 @@
 
         default_layer {
             bindings = <
-/* row1 */ &kp ESC                 &kp Q                       &kp W                  &kp F                     &kp P                 &kp B    &none &none   &kp J         &kp L     &kp U                      &kp Y                  &kp SEMICOLON                 &kp BACKSLASH
-/* row2 */ &kp LEFT_SHIFT          &mt_index_left LEFT_SHIFT A &mt_index_left LCTRL R &mt_index_left LEFT_GUI S &mt_index_left LALT T &kp G    &none &none   &kp M         &kp N     &mt_index_left RIGHT_GUI E &mt_index_left RCTRL I &mt_index_right RIGHT_SHIFT O &kp RIGHT_SHIFT
-/* row3 */ &mt LEFT_GUI AMPERSAND  &kp Z                       &kp X                  &kp C                     &kp D                 &kp V                    &kp K         &kp H     &kp COMMA                  &kp DOT                &mt LEFT_ALT TAB              &mt TILDE GRAVE
-/* thumb */                                                                            &kp ESCAPE                &sl 1                 &lt 2 ENTER              &kp BACKSPACE &kp SPACE &mt LEFT_COMMAND ENTER
+&kp ESC                 &kp Q                        &kp W                   &kp F                      &kp P                  &kp B        &none  &none  &kp J          &kp L      &kp U                       &kp Y                   &kp SEMICOLON                  &kp BACKSLASH
+&kp LEFT_SHIFT          &mt_index_left LEFT_SHIFT A  &mt_index_left LCTRL R  &mt_index_left LEFT_GUI S  &mt_index_left LALT T  &kp G        &none  &none  &kp M          &kp N      &mt_index_left RIGHT_GUI E  &mt_index_left RCTRL I  &mt_index_right RIGHT_SHIFT O  &kp RIGHT_SHIFT
+&mt LEFT_GUI AMPERSAND  &kp Z                        &kp X                   &kp C                      &kp D                  &kp V                      &kp K          &kp H      &kp COMMA                   &kp DOT                 &mt LEFT_ALT TAB               &mt TILDE GRAVE
+                                                                             &kp TAB                    &sl 1                  &lt 2 ENTER                &kp BACKSPACE  &kp SPACE  &mt LEFT_COMMAND ENTER
             >;
         };
 
         layer_1 {
             bindings = <
-/* row1 */ &trans &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4         &kp N5           &none &none   &kp NUMBER_6      &kp N7                &kp N8     &kp N9       &kp N0           &none
-/* row2 */ &trans &kp STAR     &kp PLUS     &kp UNDER    &kp LEFT_PARENTHESIS &kp PERCENT      &none &none   &kp CARET         &kp RIGHT_PARENTHESIS &kp MINUS  &kp KP_EQUAL &kp SINGLE_QUOTE &trans
-/* row3 */ &trans &kp LEFT_GUI &kp AT       &kp POUND    &kp LEFT_BRACE       &kp LEFT_BRACKET                &kp RIGHT_BRACKET &kp RIGHT_BRACE       &kp FSLH   &kp LT       &kp GT           &trans
-/* thumb */                                 &trans       &trans               &trans                           &trans            &kp SPACE             &kp LCMD
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4          &kp N5            &none  &none  &kp NUMBER_6       &kp N7                 &kp N8     &kp N9        &kp N0            &none
+&trans  &kp STAR      &kp PLUS      &kp UNDER     &kp LEFT_PARENTHESIS  &kp PERCENT       &none  &none  &kp CARET          &kp RIGHT_PARENTHESIS  &kp MINUS  &kp KP_EQUAL  &kp SINGLE_QUOTE  &trans
+&trans  &kp GRAVE     &kp AT        &kp POUND     &kp LEFT_BRACE        &kp LEFT_BRACKET                &kp RIGHT_BRACKET  &kp RIGHT_BRACE        &kp FSLH   &kp LT        &kp GT            &trans
+                                    &trans        &trans                &trans                          &trans             &kp SPACE              &kp LCMD
             >;
         };
 
         layer_2 {
             bindings = <
-/* row1 */ &trans &kp F1         &kp F2       &kp F3       &kp F4  &kp F5   &none &none   &kp HOME &kp PAGE_DOWN  &kp F8       &kp END   &none          &none
-/* row2 */ &trans &kp LEFT_SHIFT &kp LEFT_ALT &kp LEFT_GUI &none   &kp F6   &none &none   &kp LEFT &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT &kp LEFT_ARROW &none
-/* row3 */ &trans &kp F9         &kp F10      &kp F11      &kp F12 &kp F7                  &none    &kp LEFT_ARROW &none        &none     &none          &trans
-/* thumb */                                   &trans       &trans  &trans                   &trans   &trans         &trans
+&trans  &kp F1          &kp F2        &kp F3        &kp F4   &kp F5  &none  &none  &kp HOME  &kp PAGE_DOWN   &kp F8        &kp END    &none           &none
+&trans  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &none    &kp F6  &none  &none  &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp LEFT_ARROW  &none
+&trans  &kp F9          &kp F10       &kp F11       &kp F12  &kp F7                &none     &kp LEFT_ARROW  &none         &none      &none           &trans
+                                      &trans        &trans   &trans                &trans    &trans          &trans
             >;
         };
 
         layer_3 {
             bindings = <
-/* row1 */ &soft_off  &none        &none        &none        &none        &none        &none &none   &kp C_VOLUME_UP   &none   &none &none &none &soft_off
-/* row2 */ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none &none   &kp C_VOLUME_DOWN &tog 6  &none &none &none &none
-/* row3 */ &none      &none        &none        &none        &none        &none                       &kp K_MUTE        &none   &none &none &none &none
-/* thumb */                                     &none        &none        &none                       &none             &none   &none
+&soft_off   &none         &none         &none         &none         &none         &none  &none  &kp C_VOLUME_UP    &none   &none  &none  &none  &soft_off
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &kp C_VOLUME_DOWN  &tog 6  &none  &none  &none  &none
+&none       &none         &none         &none         &none         &none                       &kp K_MUTE         &none   &none  &none  &none  &none
+                                        &none         &none         &none                       &none              &none   &none
             >;
         };
 
         layer_4 {
             bindings = <
-/* row1 */ &trans &trans       &trans       &trans       &trans       &trans   &none &none   &trans       &trans       &trans       &trans &trans &trans
-/* row2 */ &trans &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp N5   &none &none   &kp NUMBER_6 &kp N7       &kp NUMBER_8 &kp N8 &kp N0 &trans
-/* row3 */ &trans &trans       &trans       &trans       &kp NUMBER_5 &trans                  &trans       &kp NUMBER_6 &trans       &trans &trans &trans
-/* thumb */                                 &trans       &sl 4        &trans                  &trans       &trans       &trans
+&trans  &trans        &trans        &trans        &trans        &trans  &none  &none  &trans        &trans        &trans        &trans  &trans  &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &none  &none  &kp NUMBER_6  &kp N7        &kp NUMBER_8  &kp N8  &kp N0  &trans
+&trans  &trans        &trans        &trans        &kp NUMBER_5  &trans                &trans        &kp NUMBER_6  &trans        &trans  &trans  &trans
+                                    &trans        &sl 4         &trans                &trans        &trans        &trans
             >;
         };
 
         minecraft {
             bindings = <
-/* row1 */ &trans &kp Q          &kp KP_NUMBER_1 &kp W  &kp E           &trans             &none &none   &trans         &kp KP_NUMBER_5 &kp KP_N4       &kp KP_NUMBER_6 &trans         &trans
-/* row2 */ &trans &kp LEFT_SHIFT &kp A           &kp S  &kp D           &kp KP_NUMBER_8    &none &none   &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &mmv MOVE_LEFT &trans
-/* row3 */ &kp T  &trans         &kp KP_NUMBER_3 &trans &kp KP_NUMBER_9 &kp KP_NUMBER_5                  &trans         &mmv MOVE_LEFT  &kp KP_NUMBER_2 &kp KP_N6       &kp KP_N7      &sl 0
-/* thumb */                                       &trans &kp SPACE       &trans                           &mkp RCLK      &mkp LCLK       &msc SCRL_DOWN
+&trans  &kp Q           &kp KP_NUMBER_1  &kp W   &kp E            &trans           &none  &none  &trans          &kp KP_NUMBER_5  &kp KP_N4        &kp KP_NUMBER_6  &trans          &trans
+&trans  &kp LEFT_SHIFT  &kp A            &kp S   &kp D            &kp KP_NUMBER_8  &none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_UP     &mmv MOVE_RIGHT  &mmv MOVE_LEFT  &trans
+&kp T   &trans          &kp KP_NUMBER_3  &trans  &kp KP_NUMBER_9  &kp KP_NUMBER_5                &trans          &mmv MOVE_LEFT   &kp KP_NUMBER_2  &kp KP_N6        &kp KP_N7       &sl 0
+                                         &trans  &kp SPACE        &trans                         &mkp RCLK       &mkp LCLK        &msc SCRL_DOWN
             >;
         };
 
         layer_6 {
             bindings = <
-/* row1 */ &kp ESC          &kp Q &kp W                 &kp F                     &kp P                  &kp B    &none &none   &kp J         &kp L                  &kp U                      &kp Y                 &kp SEMICOLON          &kp BACKSLASH
-/* row2 */ &kp LEFT_SHIFT   &kp A &mt_index_left LALT R &mt_index_left LEFT_GUI S &mt_index_left LCTRL T &kp G    &none &none   &kp M         &mt_index_left RCTRL N &mt_index_left RIGHT_GUI E &mt_index_left RALT I &kp O                  &kp RIGHT_SHIFT
-/* row3 */ &mt LEFT_GUI TAB &kp Z &kp X                 &kp C                     &kp D                  &kp V                    &kp K         &kp H                  &kp COMMA                  &kp DOT               &mt LEFT_ALT AMPERSAND &mt TILDE GRAVE
-/* thumb */                                              &kp ESCAPE                &sl 8                  &lt 7 ENTER              &kp BACKSPACE &kp SPACE              &mt LEFT_COMMAND ENTER
+&kp ESC           &kp Q  &kp W                  &kp F                      &kp P                   &kp B        &none  &none  &kp J          &kp L                   &kp U                       &kp Y                  &kp SEMICOLON           &kp BACKSLASH
+&kp LEFT_SHIFT    &kp A  &mt_index_left LALT R  &mt_index_left LEFT_GUI S  &mt_index_left LCTRL T  &kp G        &none  &none  &kp M          &mt_index_left RCTRL N  &mt_index_left RIGHT_GUI E  &mt_index_left RALT I  &kp O                   &kp RIGHT_SHIFT
+&mt LEFT_GUI TAB  &kp Z  &kp X                  &kp C                      &kp D                   &kp V                      &kp K          &kp H                   &kp COMMA                   &kp DOT                &mt LEFT_ALT AMPERSAND  &mt TILDE GRAVE
+                                                &kp ESCAPE                 &sl 8                   &lt 7 ENTER                &kp BACKSPACE  &kp SPACE               &mt LEFT_COMMAND ENTER
             >;
         };
 
         layer_7 {
             bindings = <
-/* row1 */ &trans &kp F1         &kp F2       &kp F3       &kp F4     &kp F5   &none &none   &kp HOME &kp PAGE_DOWN  &kp F8       &kp END   &none          &none
-/* row2 */ &trans &kp LEFT_SHIFT &kp LEFT_ALT &kp LEFT_GUI &kp LCTRL  &kp F6   &none &none   &kp LEFT &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT &kp LEFT_ARROW &none
-/* row3 */ &trans &kp F9         &kp F10      &kp F11      &kp F12    &kp F7                  &none    &none          &none        &none     &none          &trans
-/* thumb */                                   &trans       &trans     &trans                   &trans   &trans         &trans
+&trans  &kp F1          &kp F2        &kp F3        &kp F4     &kp F5  &none  &none  &kp HOME  &kp PAGE_DOWN   &kp F8        &kp END    &none           &none
+&trans  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &kp LCTRL  &kp F6  &none  &none  &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp LEFT_ARROW  &none
+&trans  &kp F9          &kp F10       &kp F11       &kp F12    &kp F7                &none     &none           &none         &none      &none           &trans
+                                      &trans        &trans     &trans                &trans    &trans          &trans
             >;
         };
 
         layer_8 {
             bindings = <
-/* row1 */ &trans &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4         &kp N5           &none &none   &kp NUMBER_6      &kp N7                &kp N8     &kp N9       &kp N0           &none
-/* row2 */ &trans &kp STAR     &kp PLUS     &kp UNDER    &kp LEFT_PARENTHESIS &kp PERCENT      &none &none   &kp CARET         &kp RIGHT_PARENTHESIS &kp MINUS  &kp KP_EQUAL &kp SINGLE_QUOTE &trans
-/* row3 */ &trans &kp LEFT_GUI &kp AT       &kp POUND    &kp LEFT_BRACE       &kp LEFT_BRACKET                &kp RIGHT_BRACKET &kp RIGHT_BRACE       &kp FSLH   &kp LT       &kp GT           &trans
-/* thumb */                                 &trans       &trans               &trans                           &trans            &trans                &kp LCMD
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4          &kp N5            &none  &none  &kp NUMBER_6       &kp N7                 &kp N8     &kp N9        &kp N0            &none
+&trans  &kp STAR      &kp PLUS      &kp UNDER     &kp LEFT_PARENTHESIS  &kp PERCENT       &none  &none  &kp CARET          &kp RIGHT_PARENTHESIS  &kp MINUS  &kp KP_EQUAL  &kp SINGLE_QUOTE  &trans
+&trans  &kp LEFT_GUI  &kp AT        &kp POUND     &kp LEFT_BRACE        &kp LEFT_BRACKET                &kp RIGHT_BRACKET  &kp RIGHT_BRACE        &kp FSLH   &kp LT        &kp GT            &trans
+                                    &trans        &trans                &trans                          &trans             &trans                 &kp LCMD
             >;
         };
 
         layer_9 {
             bindings = <
-/* row1 */ &trans &trans &trans &trans &trans &trans &none &none &trans &trans &trans &trans &trans &trans
-/* row2 */ &trans &trans &trans &trans &trans &trans &none &none &trans &trans &trans &trans &trans &trans
-/* row3 */ &trans &trans &trans &trans &trans &trans             &trans &trans &trans &trans &trans &trans
-/* thumb */                     &trans &trans &trans             &trans &trans &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none  &none  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none  &none  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                &trans  &trans  &trans
             >;
         };
 
         layer_10 {
             bindings = <
-/* row1 */ &kp ESC          &kp Q              &kp W &kp F              &kp P              &kp B    &none &none   &kp J         &kp L              &kp U                  &kp Y              &kp SEMICOLON           &kp BACKSLASH
-/* row2 */ &kp LEFT_SHIFT   &mt_index_left A A &kp R &mt_index_left S S &mt_index_left T T &kp G    &none &none   &kp M         &mt_index_left N N &mt_index_left E E     &mt_index_left I I &mt_index_right O O     &kp RIGHT_SHIFT
-/* row3 */ &mt LEFT_GUI TAB &kp Z              &kp X &kp C              &kp D              &kp V                    &kp K         &kp H              &kp COMMA              &kp DOT            &mt LEFT_ALT AMPERSAND  &mt TILDE GRAVE
-/* thumb */                                          &kp ESCAPE         &sl 1              &lt 2 ENTER              &kp BACKSPACE &kp SPACE          &mt LEFT_COMMAND ENTER
+&kp ESC           &kp Q               &kp W  &kp F               &kp P               &kp B        &none  &none  &kp J          &kp L               &kp U                   &kp Y               &kp SEMICOLON           &kp BACKSLASH
+&kp LEFT_SHIFT    &mt_index_left A A  &kp R  &mt_index_left S S  &mt_index_left T T  &kp G        &none  &none  &kp M          &mt_index_left N N  &mt_index_left E E      &mt_index_left I I  &mt_index_right O O     &kp RIGHT_SHIFT
+&mt LEFT_GUI TAB  &kp Z               &kp X  &kp C               &kp D               &kp V                      &kp K          &kp H               &kp COMMA               &kp DOT             &mt LEFT_ALT AMPERSAND  &mt TILDE GRAVE
+                                             &kp ESCAPE          &sl 1               &lt 2 ENTER                &kp BACKSPACE  &kp SPACE           &mt LEFT_COMMAND ENTER
             >;
         };
     };
